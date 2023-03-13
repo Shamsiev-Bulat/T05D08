@@ -8,18 +8,16 @@ int main() {
     int x, y, z, b;
     if (scanf("%d %d %d.%d", &x, &y, &z, &b) != 3) {
         printf("n/a");
-        return 1;
-    }
+    } else { 
 
     int max, min;
 
     maxmin(x, y, z, &max, &min);
 
     printf("%d %d", max, min);
-
+        }
     return 0;
 }
-
 /* This function should be kept !!! (Your AI) */
 /* But errors & bugs should be fixed         */
 void maxmin(int prob1, int prob2, int prob3, int *max, int *min) {

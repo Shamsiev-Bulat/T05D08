@@ -24,7 +24,7 @@ int main()
 
 int input(int *a, int *n)
 {
-    int t;
+    int t = 0;
     scanf("%d", n);
     if ( *n <= NMAX && *n > 0) {
     for(int *p = a; p -a < *n; p++) {

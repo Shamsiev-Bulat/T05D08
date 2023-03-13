@@ -32,8 +32,10 @@ int main()
     return t;
 }
 return 0;
+}
 
 int input(int *a, int *n) {
+    int t = 1;
     scanf("%d", n); 
     if (*n <= NMAX && *n > 0) {
         char ch;
@@ -42,14 +44,47 @@ int input(int *a, int *n) {
             ch = getchar();
             if (ch !=' '){
                 if(ch == '\n' && p - a + 1 == *n){
-                    return 1;
+                    return 0;
+                    else  {
+                        return t;
+                    }
                 }
             }
         }        
     }
-
+return 1;
 }
 
+void output(int *a, int n) {
+    for(int *p =a; p - a < n; p++){
+        printf("%d", *p);
+        if(p - a + 1 < n )
+            printf(" ");
+            }
+        }
+    
+int max(int *, int n) {
+    int max = *(a + 0); 
+    for(int *p =a; p- a < n; p++) {
+        if (*p > max)
+        max = *p;
+    }
+    return max;
 }
 
+int min(int *a, int n){
+    int main = *(a + 0);
+      for(int *p =a; p- a < n; p++) {
+        if (*p < min)
+        min = *p;
+    }
+    return min;
+}
 
+double mean(int *a, int n){
+    double sum = 0;
+    for (int *p = a; p - a < n; p++ ) {
+        sum += (*p);
+    }
+    return sum / n ;
+}
